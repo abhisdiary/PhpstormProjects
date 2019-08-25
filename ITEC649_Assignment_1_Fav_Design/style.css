@@ -1,0 +1,544 @@
+/* =========== Imports ========== */
+@import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
+
+/* ============ Z-Index ============= */
+nav,
+#promo {
+    z-index: 1000;
+}
+
+h2 {
+    z-index: 10;
+}
+
+/* ============ Globals ============= */
+html {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 50px 0px 0px 0px;
+    text-align: center;
+    min-height: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0px;
+}
+
+/* ============ Image Globals ===============*/
+
+.image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+
+.image img {
+    width: 100%;
+    object-fit: contain;
+    transition: transform 400ms ease-out;
+}
+
+.image img:hover {
+    transform: scale(1.15);
+}
+
+/* ============ Shopping Globals ===========*/
+
+.inventory {
+    font-size: 2rem;
+    text-align: center;
+    color: black;
+    padding-top: 1rem;
+    text-transform: uppercase;
+    color: darkred;
+    border-bottom: 1px lightgrey solid;
+    margin-bottom: 1rem;
+}
+
+.cost {
+    color: black;
+    float: left;
+    text-align: center;
+    font-size: 2.5em;
+    padding-left: 1rem;
+}
+
+.cart {
+    float: right;
+    padding-right: 1rem;
+}
+
+form input[name=quantity] {
+    display: inline-block;
+    font-size: 1.5rem;
+    text-align: right;
+    padding: none;
+    margin: none;
+    height: 2.5rem;
+    width: 3.5rem;
+    vertical-align: middle;
+}
+
+form input[type=submit] {
+    display: inline-block;
+    border: none;
+    padding: 1rem;
+    margin: 0;
+    text-decoration: none;
+    background: orange;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+form input[type=submit]:hover {
+    background: orangered;
+}
+
+/* ============ Header/Landing ============= */
+
+header {
+    background-color: white;
+    background-image: url('https://images.pexels.com/photos/988872/pexels-photo-988872.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+header h1 {
+    font-size: 6em;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation:
+        typing 1.5s steps(20, end),
+        blink-caret 0.5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 4.5em
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: orange;
+    }
+}
+
+/* ========== Main Navigation ========== */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    left: 0px;
+    top: 30px;
+    background-color: #232323;
+    width: 100%;
+    height: 50px;
+}
+
+nav ul,
+nav form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    height: 100%;
+}
+
+nav ul li a {
+    padding: 10px;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: white;
+    background-color: orangered;
+}
+
+#sale a {
+    color: orange;
+}
+
+#sale a:hover {
+    color: white;
+}
+
+/* ============= Search Bar ============== */
+
+#product-search-form {
+    position: relative;
+    width: 20%;
+}
+
+#product-search-form input[name=query] {
+    float: left;
+    width: 100%;
+    border: 3px solid orange;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px;
+    outline: none;
+    color: #9DBFAF;
+    text-transform: capitalize;
+}
+
+#product-search-form input[name=query]:focus {
+    border: 3px solid orangered
+}
+
+#product-search-form button {
+    position: absolute;
+    right: 0px;
+    width: 40px;
+    height: 36px;
+    border: 1px solid orange;
+    background: orange;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#product-search-form button:hover {
+    background: orangered;
+    border: 1px solid orangered;
+}
+
+/* ============ Secondary Navigation ============ */
+
+#promo {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 30px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#promo ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    height: 100%;
+    flex: 1;
+}
+
+#promo ul li a {
+    color: black;
+    padding: 10px;
+}
+
+#promo ul li a:hover {
+    color: orangered;
+}
+
+/* ============= Content ============== */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 10%;
+}
+
+/* ============== Featured =============== */
+
+.featured {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    min-width: 800px;
+}
+
+
+.featured h2 {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    bottom: 30%;
+    transform: translate(-50%);
+    font-size: 3rem;
+    font-family: sans-serif;
+    color: white;
+    margin: 0rem 0rem 2rem 0rem;
+    background: rgba(0, 0, 0, 0.4)
+}
+
+.featured .description {
+    padding-top: 1rem;
+    width: 80%;
+    font-size: 1.4rem;
+    font-style: italic;
+}
+
+.featured .description::first-line {
+    font-style: initial;
+    font-size: 1.8rem;
+}
+
+.featured .product-detail {
+    width: 100%;
+}
+
+/* ============== Bogus Pay ============== */
+#special-offer {
+    position: relative;
+    height: 5rem;
+    width: 100%;
+    background: #a7dace;
+    margin: 2rem 0rem;
+    border-radius: 1rem;
+}
+
+#special-offer p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: bolder;
+    font-family: sans-serif;
+    margin: 0px;
+    width: 100%;
+}
+
+#special-offer a {
+    color: darkblue;
+    font-size: 1.5rem;
+}
+
+#special-offer a:hover {
+    color: blue;
+    font-size: 1.5rem;
+}
+
+/* ============== Product List ============= */
+.productlist {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 4rem 2rem;
+}
+
+/* ============ Product Header ============ */
+
+.product {
+    position: relative;
+}
+
+.product h2 {
+    width: 100%;
+    font-size: 2rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background: rgba(0, 0, 0, 0.4)
+}
+
+.product h2 a {
+    color: white;
+    text-transform: uppercase;
+}
+
+.product h2 a:hover {
+    color: orange;
+}
+
+/* ============== Promotional Text ============== */
+
+#promotional-text {
+    margin-top: 30px;
+}
+
+#promotional-text a {
+    color: orange;
+}
+
+#promotional-text a:hover {
+    color: orangered;
+}
+
+/* ============= Footer ================= */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #232323;
+}
+
+footer p {
+    color: white;
+}
+
+/* ============ Signup Form ============== */
+
+#signupform {
+    width: 40%;
+}
+
+#signupform form {
+    width: 100%;
+    position: relative;
+    transform: translate(-10px);
+}
+
+#signupform form > span {
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 30px;
+    width: 100%;
+}
+
+#signupform form input[name=email] {
+    float: left;
+    width: 100%;
+    border: 3px solid orange;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px;
+    outline: none;
+    color: #9DBFAF;
+    margin-top: 1rem;
+}
+
+#signupform form input[name=email]:focus {
+    border: 3px solid orangered;
+}
+  
+#signupform form button {
+    position: absolute;  
+    right: -50px;
+    bottom: calc(-36px - 1rem);
+    width: 40px;
+    height: 36px;
+    border: 1px solid orange;
+    background: orange;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* ============== Social ============ */
+.social {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    background: #232323;
+    margin: 0px;
+    padding: 10px 0px;
+    z-index: 1000;
+    border-top-right-radius: 1rem;
+}
+
+.social h2 {
+    color: white;
+    margin: 0px;
+    padding-bottom: 1rem;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+.social ul {
+    display: flex;
+    margin: 0px;
+    padding: 0px; 
+}
+
+.social ul li {
+    display: inline-block;
+    flex: 1;
+}
+
+.social ul li:nth-child(1) a:before {
+    font-family: "Font Awesome 5 Brands"; font-weight: 400; content: "\f082";
+    font-size: 2rem;
+    color: white;
+}
+
+.social ul li:nth-child(2) a:before {
+    font-family: "Font Awesome 5 Brands"; font-weight: 400; content: "\f16d";
+    font-size: 2rem;
+    color: white;
+}
+
+
+.social ul li:nth-child(3) a:before {
+    font-family: "Font Awesome 5 Brands"; font-weight: 400; content: "\f167";
+    font-size: 2rem;
+    color: white;
+}
+
+.social ul li a {
+    font-size: 0;
+    padding: 40px 20px 20px 20px;
+    margin: 0px;
+}
+
+.social ul li:nth-child(1) a:hover {
+    background: #3b5998;
+}
+
+.social ul li:nth-child(2) a:hover {
+    background: #d10869;
+}
+
+.social ul li:nth-child(3) a:hover {
+    background: #FF0000;
+}

@@ -1,0 +1,395 @@
+html {
+    font-family: Trebuchet MS, sans-serif;
+}
+
+
+
+@viewport {
+    width: auto;   /*text responsive requirement*/
+}
+
+a:-webkit-any-link { /*link responses*/
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    color: green;
+}
+
+a:visited {
+    color: purple;
+}
+
+body {
+    /*background-image: url(C:/Users/Sukanya%20Mukherjee/Desktop/Zen%20garden/Body.jpg);*/
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    height: 10%;
+    top: 0;
+    right: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+
+    text-align: center;
+
+    overflow: hidden;
+    background-color: #333;
+    z-index: 2;
+
+}
+
+/*div{ float:left;}*/
+
+h1 {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+
+    margin-top: 5%;
+    padding: 2%;
+    color: white;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 8vw;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-align: center;
+    background-color: #40bf80;
+    /*background-image: url(C:/Users/Sukanya%20Mukherjee/Desktop/Zen%20garden/Title.png);*/
+    width: 100%;
+    margin-bottom: 5%;
+    z-index: 2;
+}
+
+
+ul {
+    list-style-type: none;
+
+}
+
+.menu {
+    float: left;
+    z-index: 2;
+}
+
+.menu li {
+    border-right: 1px solid #bbb;
+    float: left;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 2% 2%;
+    text-decoration: none;
+    margin: 10px;
+
+}
+
+/* Change the link color on hover */
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+
+.account-menu {
+    /* margin-left:10%;*/
+    display: inline-block;
+    margin-left: -50%
+}
+
+.account-menu li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+.account-menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding-top: 1.2%;
+    text-decoration: none;
+}
+
+.account-menu li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+#product-search-form {
+    position: fixed;
+    width: 50%;
+    height: 20%;
+    border-radius: 0.3%;
+    font-size: 1vw;
+    display: inline-block;
+    margin-left: 5%;
+    padding-top: 1.2%;
+}
+
+#promo {
+    float: right;
+    margin-left: -10%;
+    padding: 0;
+    margin-top: -17%;
+    font-size: 1vw;
+    font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+
+}
+
+#promo li {
+    float: right;
+}
+
+#promo li a {
+    color: white;
+    text-align: center;
+    padding: 1.2% 1.3%;
+    text-decoration: none;
+    background-color: red;
+}
+
+#promo li a:hover {
+    background-color: white;
+    color: black;
+}
+
+.content {
+    margin: 0px auto;
+    padding-top: 5px;
+    width: 85%;
+}
+
+.featured h2 {
+    border-radius: 5px;
+    line-height: 40px;
+    color: #222222;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.featured img {
+    backface-visibility: hidden;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    display: block;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 1;
+    padding: 6px 6px;
+    transition: .5s ease;
+    max-width: 100%;
+    -webkit-animation: feat infinite; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation: feat infinite;
+    animation-duration: 1s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes feat {
+    from {
+        background-color: #ff9999;
+    }
+    to {
+        background-color: #ffff33;
+    }
+}
+
+/* Standard syntax */
+@keyframes feat {
+    from {
+        background-color: #ff9999;
+    }
+    to {
+        background-color: #ffff33;
+    }
+
+}
+
+
+.featured .description {
+    background-color: #3d3d29;
+    color: white;
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+.featured .inventory {
+    margin-left: 20px;
+    padding: 1%;
+}
+
+.featured .product-detail {
+    margin-top: 3%;
+    padding: 1%;
+}
+.product-detail .cart {
+    margin-top: 15px;
+}
+
+#special-offer {
+}
+#boguspay {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #222;
+    font-weight: bold;
+}
+
+#special-offer p {
+    background: gray;
+    color: white;
+    line-height: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+
+.product-detail .inventory, .product-detail .cart {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+.product-detail .cost {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.productlist {
+    /*overflow: scroll; */
+    border: 2px solid black;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+}
+
+.product {
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+    padding: 5px;
+    position: relative;
+    height: auto;
+}
+
+.product img {
+    margin: 5px;
+    padding: 5px;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.product h2 {
+    text-align: center;
+}
+
+.product a {
+    font-size: 12px;
+    text-align: center;
+}
+
+.product .cost {
+    /*clear: left;
+    margin-left: 50%;*/
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1vw;
+    padding: 1px 2px;
+
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.product:hover .image {
+    opacity: 0.3;
+}
+
+.product:hover .cost {
+    opacity: 1;
+}
+
+.product .cart {
+    width: 250px;
+}
+
+.product .inventory {
+    padding: 8px;
+    margin-left: 20px;
+    display: inline-block;
+    font-size: 13px;
+}
+
+.product input[type="number"] {
+    width: 50px;
+    margin-left: 30px;
+}
+#promotional-text {
+    border: 2px solid black;
+    float: left;
+    margin: 10px auto;
+    padding: 0px;
+    letter-spacing: 3px;
+    text-align: center;
+    text-indent: 50px;
+}
+
+#promotional-text p {
+    font-family: Courier New, monospace;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#promotional-text a {
+    text-decoration: none;
+}
+
+footer p {
+    clear: left;
+    margin-left: 42%;
+    margin-top: 0.8%;
+
+}
+
+#signupform form {
+    margin-top: 4.1%;
+    background-color: yellow;
+    padding: 1%;
+}
+
+.social {
+    font-size: 1.2vw;
+    background-color: yellow;
+    padding: 1%;
+}
